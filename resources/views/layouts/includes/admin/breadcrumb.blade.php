@@ -9,7 +9,7 @@
                 {{--itmerida-poniente-dsc-edificio-h8--}}
                 {{--sino es el primer elemento ponle separador--}}
                 @unless($loop->first)
-                    <span class="px-1 text-gray-400">/<@/span>
+                    <span class="px-1 text-gray-400">/<span>
                 @endunless
                 {{--revise si tiene un href--}}
                 @isset($item['href'])
