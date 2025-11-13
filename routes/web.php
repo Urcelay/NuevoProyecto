@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\RoleUsers;
 
 Route::redirect('/', '/admin');
-//Route::get('/', function () {
- //   return view('welcome');
-//});
 
 Route::middleware([
     'auth:sanctum',
@@ -16,3 +14,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resource('role-users', RoleUsers::class);
